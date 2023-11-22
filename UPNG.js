@@ -2,22 +2,20 @@
   var UPNG = {};
 
   // Make available for import by `require()`
-  var pako;
+  var fflate;
   if (typeof module == "object") {
     module.exports = UPNG;
   } else {
     window.UPNG = UPNG;
   }
   if (typeof require == "function") {
-    pako = require("pako");
-  } else {
-    pako = window.pako;
+	fflate = require("fflate");
   }
   function log() {
     if (typeof process == "undefined" || process.env.NODE_ENV == "development")
       console.log.apply(console, arguments);
   }
-  (function (UPNG, pako) {
+  (function (UPNG, fflate) {
     UPNG.toRGBA8 = function (out) {
       var w = out.width,
         h = out.height;
@@ -403,7 +401,7 @@
     };
 
     UPNG.decode._inflate = function (data) {
-      return pako["inflate"](data);
+      return fflate["decompressSync"](data);
     };
 
     UPNG.decode._readInterlace = function (data, out) {
@@ -1056,7 +1054,7 @@
         if (h * bpl > 500000 && (t == 2 || t == 3 || t == 4)) continue;
         for (var y = 0; y < h; y++)
           UPNG.encode._filterLine(data, img, y, bpl, bpp, t);
-        fls.push(pako["deflate"](data));
+        fls.push(fflate["deflateSync"](data));
         if (bpp == 1) break;
       }
       var ti,
@@ -1448,5 +1446,5 @@
       }
       return nimg;
     };
-  })(UPNG, pako);
+  })(UPNG, fflate);
 })();
