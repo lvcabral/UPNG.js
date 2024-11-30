@@ -1,16 +1,17 @@
 {
   "name": "upng-js",
   "description": "Small, fast and advanced PNG / APNG encoder and decoder",
-  "version": "2.2.0",
-  "homepage": "https://github.com/photopea/UPNG.js",
+  "version": "2.2.1",
+  "homepage": "https://github.com/lvcabral/UPNG.js",
   "author": "photopea (https://github.com/photopea)",
   "contributors": [
-    "Scimonster (https://github.com/Scimonster)"
+    "Scimonster (https://github.com/Scimonster)",
+    "Marcelo Lv Cabral <marcelo@lvcabral.com>"
   ],
   "license": "MIT",
-  "repository": "github:photopea/UPNG.js",
+  "repository": "github:lvcabral/UPNG.js",
   "bugs": {
-    "url": "https://github.com/photopea/UPNG.js/issues"
+    "url": "https://github.com/lvcabral/UPNG.js/issues"
   },
   "main": "UPNG",
   "keywords": [
@@ -20,6 +21,6 @@
     "conversion"
   ],
   "dependencies": {
-    "fflate": "^0.8.1"
+    "fflate": "^0.8.2"
   }
 }
