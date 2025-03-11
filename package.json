@@ -17,6 +17,7 @@
     "url": "https://github.com/lvcabral/upng.js/issues"
   },
   "main": "upng.js",
+  "types": "../../@types/upng-js/index.d.ts",
   "keywords": [
     "png",
     "apng",
