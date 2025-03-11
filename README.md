@@ -1,6 +1,8 @@
 # UPNG.js
 A small, fast and advanced PNG / APNG encoder and decoder. It is the main PNG engine for [Photopea image editor](https://www.photopea.com).
 
+**Note:** This fork has the NPM version of the code and replaces the module `pako` by the lighter `fflate`.
+
 * [Examples of PNGs minified by UPNG.js](https://blog.photopea.com/png-minifier-inside-photopea.html#examples)
 * [Try UPNG.js in Photopea](https://www.photopea.com) - open an image and press File - Save for web, play with the Quality
 * [UPNG.Photopea.com](http://upng.photopea.com) - a separate minifier app, that uses UPNG.js
